@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}Авторазиция{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'main/styles/css_3.css' %}">
+    <link rel="stylesheet" href="{% static 'main/styles/css_5.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="body">
+        <form method="post">
+            <div class="box">
+                <div id="glass">
+                    {% csrf_token %}
+                    <h1>Регистрация</h1>
+                    {% for el in form %}
+                        <h3 id="pole"><label for="{{ el.id_for_label }}">{{ el.label }}</label><span>{{ el }}</span></h3>
+                        <div id="form_error">{{ el.errors }}</div>
+                    {% endfor%}
+                    <div id="form_error">{{ form.non_field_errors }}</div>
+                    <button id="button">Регистрация</button>
+                    <h5><a href="{% url 'login' %}">Войти</a></h5>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block javascript %}{% endblock %}

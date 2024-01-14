@@ -1,0 +1,276 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 0)) ;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#vr {
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 28), rgb(0, 0, 0)) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+    height: 4vh;
+}
+
+#block_1 {
+    width: 100vw;
+}
+
+#zagalovok {
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+
+#name {
+    float: left;
+    font-size: 3vh;
+    color: white;
+}
+
+#zagalovok li {
+   display: inline-block;
+   padding: 0;
+   text-align: left;
+   width: 7vh;
+   margin-left: 15px;
+}
+
+#zagalovok li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    font-size: 2vh;
+    width: 7vh;
+}
+
+#zagalovok li a:hover {
+    /* background-color: blue; */
+    text-shadow: -1px 1px 10px rgb(0, 0, 0);
+    line-height: 100%;
+    transition: 0.5s;
+    border-bottom: 1px solid white;
+}
+
+
+#end_1 {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+}
+
+#end_1 #ending_1 {
+    display: flex;
+    list-style: none;
+    float: right;
+    align-items:center;
+    justify-content: center;
+    line-height: 0vh;
+    margin-right: 3vh;
+}
+
+#end_1 #ending_1 li {
+    padding: 0 5px;
+}
+
+#end_1 #ending_1 li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+#end_1 #ending_1 li a:hover {
+    text-shadow: -1px 1px 10px rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+#vr_3 {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    left: 0;
+    margin-bottom: -20px;
+}
+
+#vr_2 {
+    display: none !important;
+}
+
+/* 1 */
+
+#body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: red blur(1px);
+    display: grid;
+}
+
+#imeg {
+    display: flex;
+    margin: 1.5vw;
+    min-width: 160px;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 3px solid rgba(100, 100, 100, 0.5);
+    overflow: hidden;
+    flex-direction: column;
+}
+
+#sl {
+    width: 150px;
+    border-bottom-right-radius: inherit;
+    border-top-right-radius: inherit;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    order: 1;
+}
+
+#imeg:hover > #sl {
+    transform: translateY(-85%);
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#imeg:hover > #block_6 {
+    display: flex;
+    transition: 0.3s;
+    margin-top: -80px;
+    margin-bottom: 80px;
+}
+
+#gran {
+    margin: 10px auto;
+    height: auto;
+    width: 70vw;
+    border-radius: 20px;
+    display: flex;
+    overflow-x: auto;
+}
+
+#gran::-webkit-scrollbar {
+    max-width: 30vw;
+    height: 10px;
+    /* border-radius: 50%; */
+
+}
+
+#gran::-webkit-scrollbar-track {
+    max-width: 30vw;
+}
+
+#gran::-webkit-scrollbar-thumb {
+    background: radial-gradient( rgb(255, 255, 255), black);
+    border-radius: 50%;
+
+}
+
+#unit_1 {
+    height: 35px;
+    width: 10vw;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0;
+    border-right: 1px solid #fff;
+    transition: 0.3s;
+    color: #ffffff;
+}
+
+button .last {
+    border: 1px solid #000000;
+}
+
+#block_4 li:hover {
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+#unit_1:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+#unit_1:active {
+    background-color: #252525;
+}
+
+#block_3 {
+    box-shadow: 0px 1.5px 10px 1px white;
+    height: 8vh;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+#block_4 {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#block_4 li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: #000000;
+    
+}
+
+#block_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 80px auto;
+}
+
+#block_5 {
+    border: 1px solid black;
+    box-shadow: 0px 1.5px 10px 1px white;
+
+}
+
+
+#search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pole {
+    border-radius: 1vh;
+    float: right;
+    display: flex;
+    /* margin-left: 100px; */
+    font-size: 18px;
+    height: 25px;
+    right: 0;    
+}
+
+embed {
+    height: 96vh;
+    position: relative;
+    /* background-color: red; */
+}
+
+#block_6 {
+    order: 2;
+    display: none;
+    transition: 0.3s;
+}

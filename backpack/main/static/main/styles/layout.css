@@ -1,0 +1,123 @@
+*{
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html {
+    height: 100vh;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    background: linear-gradient(90deg, black, rgb(0, 0, 30), black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: radial-gradient(rgb(0, 0, 30), black 80%);
+    border-radius: 30px;
+    border: 0.01px solid rgb(20, 20, 20);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#vr {
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 28), rgb(0, 0, 0)) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 2vw;
+    height: 4vh;
+}
+#block_1 {
+    width: 100vw;
+}
+#zagalovok {
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+#name {
+    float: left;
+    font-size: 20px;
+    color: white;
+}
+/* #zagalovok li {
+    display: inline-block;
+    padding: 0 25px;
+    text-align: left;
+    width: 50px;
+    margin-left: 15px;
+    text-align: left;
+
+} */
+#zagalovok a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    font-size: 15px;
+    margin-left: 10px;
+}
+#zagalovok a:hover {
+    text-shadow: -1px 1px 10px rgb(0, 0, 0);
+    line-height: 100%;
+    transition: 0.5s;
+    border-bottom: 1px solid white;
+}
+#vr_2 {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-bottom: -20px;
+}
+#end {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    color: #fff;
+}
+#end #ending {
+    display: flex;
+    list-style: none;
+    /* margin-right: 3vh; */
+}
+#end #ending li {
+    padding: 0 5px;
+    margin-right: 5vw;
+}
+#end #ending li h3 {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+#end #ending li a:hover {
+    /* text-shadow: -1px 1px 10px rgb(255, 255, 255); */
+    transition: 0.3s;
+    color: blue;
+}
+#end #ending li a:active {
+    color: red;
+}
+#kontacts {
+    display: flex;
+}
+#kontacts ul {
+    width: 300px;
+}
+#kontacts ul li {
+    width: 250px;
+}
+
+#ava {
+    border-radius: 50%;
+}

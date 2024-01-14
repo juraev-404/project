@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'main/styles/layout.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="vr">
+        <h3 id="name">Portfolio</h3>
+        <div id="block_1">
+            <div id="zagalovok">
+                <a href="{% url 'home' %}">Главная</a>
+                <!-- <a href="{% url 'profile' %}">Предмет</a> -->
+                <a href="{% url 'forum' %}">Новости</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'personal_area' %}">{{ user.username }}</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Войти</a>
+                {% endif %}
+                <a href="{% url 'logout' %}">B</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="main"> -->
+        {% block body %}
+        {% endblock %}
+    <!-- </div> -->
+    <div id="vr_2">
+        <div id="end">
+            <ul id="ending">
+                <li>
+                    <h3>О нас</h3>
+                    <a target="_blank" href="">Отзиви</a>
+                </li>
+                <li>
+                    <h3>Контакти</h3>
+                    <div id="kontacts">
+                        <ul>
+                            <li><b>+7********</b></li>
+                            <li>Эл. почта: ***@gmail</li>
+                        </ul>   
+                        <ul>
+                            <li><a href="">Whatsap</a></li>
+                            <li><a href="">Telegram</a></li>
+                            <li><a href="">wk</a></li>
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">Facebook</a></li>
+                        </ul>
+                    </div> 
+                </li>
+                <li><h3>Реклама</h3></li>
+            </ul>
+        </div>
+    </div>
+    {% block javascript %}{% endblock %}"
+</body>
+</html>

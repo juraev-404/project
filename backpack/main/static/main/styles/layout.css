@@ -5,6 +5,9 @@
 }
 html {
     height: 100vh;
+    /* width: 100vw; */
+    /* max-width: 100vw; */
+    overflow-x: hidden;    
     background-size: 100%;
     display: flex;
     flex-direction: column;
@@ -32,17 +35,17 @@ body {
     justify-content: center;
 }
 #vr {
-    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 28), rgb(0, 0, 0)) !important;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 28), rgb(0, 0, 0));
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0 2vw;
     height: 4vh;
 }
 #block_1 {
     width: 100vw;
 }
+
 #zagalovok {
     list-style: none;
     padding: 0;
@@ -75,6 +78,16 @@ body {
     transition: 0.5s;
     border-bottom: 1px solid white;
 }
+h3 {
+    position: relative;
+}
+#menu {
+    display: none;
+}
+h3:hover > #menu  {
+    display: none;
+    background-color: black;
+}
 #vr_2 {
     display: flex;
     justify-content: center;
@@ -93,7 +106,7 @@ body {
 }
 #end #ending li {
     padding: 0 5px;
-    margin-right: 5vw;
+    margin-right: 150px;
 }
 #end #ending li h3 {
     text-decoration: none;
@@ -112,12 +125,135 @@ body {
     display: flex;
 }
 #kontacts ul {
-    width: 300px;
+    width: 200px;
 }
-#kontacts ul li {
-    width: 250px;
+#reck {
+    margin-left: -150px;
 }
-
 #ava {
     border-radius: 50%;
+}
+#hr {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+@media screen and (max-width: 450px) {
+    html {
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        /* background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 30),  rgb(0, 0, 0)) !important; */
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
+
+        /* overflow-x: hidden; */
+    }
+    #end {
+        background-color: rgb(0, 0, 0);
+        width: 100vw;
+        color: #fff;
+    }        
+    #kontacts {
+        flex-direction: column;
+    }    
+    #kontacts ul {
+        margin-right: -5vw;
+        margin-bottom: 10px;
+    }
+    #kontacts ul li {
+        width: 100px;
+    }
+    #end #ending li {
+        padding: 0 5px;
+        margin-right: 0;
+    }
+    #end #ending {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+    }
+    #reck {
+        display: flex;
+        flex-direction: column;
+        margin: 0 ;
+    }
+    #vr {
+        background: black !important;
+    }
+    h3 {
+        position: relative;
+    }
+    #menu {
+        height: 100vh;
+        width: 200px;
+        display: none;
+        list-style: none;
+        position: absolute;
+        padding: 0;
+        top: 0;
+        margin-left: -10px;
+        z-index: 10;
+    }
+    #menu li {
+        min-width: 180px;
+        display: list-item;
+        float: none;
+    }
+    #home {
+        margin-top: 40px;
+    }
+    h3:hover > #menu  {
+        display: inherit;
+        background-color: black;
+    }
+    #menu li a:hover > #menu  {
+        display: block;
+        background-color: black;
+    }
+    #menu li:hover > #menu  {
+        display: inherit;
+        background-color: black;
+    }
+
+    #menu li a {
+        margin-top: 30px;
+        padding: 0px 15px;
+        display: block;
+        color: white;
+        font-size: 18px;
+        line-height: 16px;
+        text-decoration: none;
+    }    
+    .hidd {
+        display: none;
+    }
+    .chemistry {
+        display: none;
+    }
+    .physics {
+        right: 0;
+        margin-right: 0 !important;
+    }
+    #gran {
+        height: 160px;
+        min-height: 160px;
+    }
+}
+@media screen and (max-width: 850px){
+    #kontacts {
+        flex-direction: column;
+    }
+    #kontacts ul {
+        margin-right: -5vw;
+        margin-bottom: 10px;
+    }
+    #me {
+        width: 70px !important;
+        margin-right: 5vh !important;
+    }
+}
+
+@media screen and (max-width: 950px){
+
 }

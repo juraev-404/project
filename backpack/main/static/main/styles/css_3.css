@@ -29,7 +29,6 @@
 #pole {
     width: 260px;
     font-weight: bold;
-
 }
 
 #form_error {
@@ -47,7 +46,6 @@
     color: white;
     border: none;
     border-radius: 10px;
-    /* width: 100px; */
     height: 30px;
 }
 
@@ -55,4 +53,14 @@ h3 {
     
     /* text-align: justify; */
     /* background-color: #fff; */
+}
+
+@media screen and (max-width: 300px) {
+    #body {
+        font-size: 14px;
+    }
+    #pole {
+        width: 245px;
+        font-weight: bold;
+    }
 }

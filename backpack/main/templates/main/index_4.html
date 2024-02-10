@@ -2,14 +2,35 @@
 
 {% load static %}
 
-{% block title %}Авторазиция{% endblock %}
+{% block title %}Посты{% endblock %}
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'main/styles/css_4.css' %}">
 {% endblock %}
 
 {% block body %}
-
+    <div id="block_2">
+        <h1>Посты</h1>
+        <div id="ins">
+            <h3 id="btt"><a href="{% url 'add_post' %}">+ Добавить пость</a></h3>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, neque! Quasi labore saepe sit dignissimos exercitationem, totam aliquam eius. Nisi maiores doloremque ipsum. Maiores in quidem libero, temporibus ea voluptatum consectetur. Culpa quas eos temporibus repellat
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, neque! Quasi labore saepe sit dignissimos exercitationem, totam aliquam eius. Nisi maiores doloremque ipsum. Maiores in quidem libero, temporibus ea voluptatum consectetur. Culpa quas eos temporibus repellat
+        </div>
+    </div>
+    {% for el in posts %}
+        <div class="post">
+            <h2>{{ el.name }}</h2>
+            <hr>
+            <div class="txt">
+                <p>{{ el.content }}</p>
+            </div>
+            <div id="information">
+                {{ el.date }}
+                <a href="{% url 'post' el.id %}" class="detailes">Подробнее</a>
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}
 
 {% block javascript %}{% endblock %}
+

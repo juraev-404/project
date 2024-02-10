@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}Добавление поста{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'main/styles/css_7.css' %}">
+{% endblock %}
+
+{% block body %}
+    <form class="form" method="post" enctype="multipart/form-data">
+        <div id="add_block">
+            {% csrf_token %}
+            {{ form.name }}
+            {{ form.content }}
+            {{ form.date }}
+            <input type="hidden" name="author" value="{{ user.username}}">
+            <span>{{ error }}</span>
+            <button id="add" type="submit">Добавить</button>
+        </div>
+    </form>
+{% endblock %}
+
+{% block javascript %}{% endblock %}

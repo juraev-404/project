@@ -1,0 +1,139 @@
+main {
+    min-height: 70%;
+}
+#comment {
+    margin: 0 auto;
+    width: 850px;
+}
+
+#comment textarea {
+    resize: none;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    /* overflow: hidden; */
+}
+#T ::-webkit-scrollbar{
+    max-width: 10px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;    
+    background: black;
+    
+}
+#T ::-webkit-scrollbar-thumb {
+    background: white;
+}
+#comments {
+    border-bottom: 1px solid grey;
+    color: white;
+    max-width: 400px;
+    padding: 3px 0;
+    margin: 20px 0  ;
+}
+
+.post {
+    width: 850px;
+    color: white;
+    margin: 30px auto;
+    margin-top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.txt {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    width: 750px;
+    text-align: justify;
+    white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt p{
+    width: 700px;
+}
+
+span {
+    float: right;
+    margin: 0 10px;
+}
+
+#info_com {
+    margin-top: -18px;
+    margin-bottom: 50px;
+    color: white;
+    width: 400px;
+}
+#comment_list {
+    display: flex;
+    flex-direction: column-reverse;
+}
+textarea {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    .post {
+        width: 100%;
+    }
+    .txt {
+        width: 100%;
+    }
+    .txt p {
+        width: 90%;
+    }
+    #comment {
+        margin: 0 auto;
+        width: 100%;
+    }
+    textarea {
+        width: 250px;
+        height: 100px;
+        margin: 10px;
+        margin-bottom: 15px;
+    }
+    button {
+        /* float: right; */
+        background: linear-gradient(45deg, green, black);
+        border: 1px solid black;
+        border-radius: 5px;
+        color: white;
+        right: 0;
+    }
+    #info_com {
+        margin-top: -18px;
+        margin-bottom: 50px;
+        color: white;
+        max-width: 500px;
+        width: auto;
+    }
+    #comments {
+        width: auto;
+        max-width: 500px;
+        font-size: 16px;
+    }
+    #comment_list {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #info_com {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+    }
+    #comments {
+        width: auto;
+        max-width: 500px;
+    }
+    button {
+        float: right;
+        margin-top: -15px;
+    }
+    .txt {
+        font-size: 14px;
+    }
+}

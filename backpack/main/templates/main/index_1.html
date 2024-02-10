@@ -31,10 +31,10 @@
         <div id="block_14_4" class="geometry">cos(a - b) = cosa*cosa <br>+<br> sinb*sinb</div>
     </div>
     <div id="block_16">
-        <div id="block_16_1" class="physics">F = k*(|q<sub>1</sub>|-|q<sub>2</sub>|)/R</div>
-        <div id="block_16_2" class="physics">F = ma</div>
+        <div id="block_16_2" class="physics">F<sub>a</sub> = ρgV</div>
+        <div id="block_16_4" class="physics">F = ma</div>
         <div id="block_16_3" class="physics">F = mg</div>
-        <div id="block_16_4" class="physics">F = -kx</div>
+        <div id="block_16_1" class="physics">F = -kx</div>
     </div>
     <div id="block_11">
         <div class="container">
@@ -44,12 +44,14 @@
         </div>
         <div id="begening">
             <h1>Твой онлайн</h1>
-            <div>
-                <div id="open" href="#">
-                    <i id="fon_1"></i>
-                    <i id="fon_2"></i>
+            <div id="open" href="#">
+                <i id="fon_1"></i>
+                <i id="fon_2"></i>
+                {% if user.is_authenticated %}
                     <a id="new_page" href="{% url 'personal_area' %}">Портфель</a>
-                </div>
+                {% else %}
+                    <a id="new_page" href="{% url 'login' %}">Портфель</a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -70,71 +72,65 @@
                     <div id="indecator_6"><span></span></div>
                 </div>
             </div>
-            <div id="vr_1">
-                <div id="block_2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod temporibus 
-                    dolores ab earum ipsa perspiciatis a quae enim, maiores, 
-                    in repellendus possimus neque nobis et architecto doloremque repellat iusto hic.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, similique ipsam numquam nihil 
-                    delectus nulla vitae illo dolor dolores magnam, fugiat tempora ab animi. 
-                    Rerum accusamus tempore veniam adipisci quas.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestiae ipsam sequi et voluptas 
-                    architecto dolorem recusandae provident quibusdam consequatur commodi natus quasi odio, 
-                    eius deserunt reprehenderit non facere?
-                </div>
+            <div id="block_2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod temporibus 
+                dolores ab earum ipsa perspiciatis a quae enim, maiores, 
+                in repellendus possimus neque nobis et architecto doloremque repellat iusto hic.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, similique ipsam numquam nihil 
+                delectus nulla vitae illo dolor dolores magnam, fugiat tempora ab animi. 
+                Rerum accusamus tempore veniam adipisci quas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestiae ipsam sequi et voluptas 
+                architecto dolorem recusandae provident quibusdam consequatur commodi natus quasi odio, 
+                eius deserunt reprehenderit non facere?
             </div>
         </div>
-        <hr>  
-        <div id="block_7">
-            <div id="block_10">
-                <div id="block_4">
-                    <ul id="block_5">
-                        <li id="block_6"><button id="unit" class="first">Все</button></li>
-                        <li id="block_6"><button id="unit">Школная</button></li>
-                        <li id="block_6"><button id="unit">Литература</button></li>
-                        <li id="block_6"><button id="unit">Научные</button></li>
-                        <li id="block_6"><button id="unit" class="last">Другые</button></li>
-                    </ul>
-                </div>
-                <div id="less">
-                    <div id="block_8">
-                        <ul id="block_9">
-                            <li><button id="unit_1" class="first">основа</button></li>
-                            <li><button id="unit_1">формулы</button></li>
-                            <li><button id="unit_1" class="last_1">термини</button></li>
-                        </ul>
-                        <div id="search"><input id="pole" type="search"></div>
-                    </div>
-                    <div id="gran">
-                        <div id="imeg"><img id="sl" src="{% static 'main/images/1.png'%}" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                    </div>
-                    <div id="gran">
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                    </div>
-                    <div id="gran">
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_12">HTML</button></div>
-                    </div>
-                </div>
+        <hr>
+        <div id="less">
+            <div id="block_8">
+                <ul id="block_9">
+                    <li><button onclick="alll()" class="unit_1 first_1" id="all">Все</button></li>
+                    <li><button onclick="algebra()" class="unit_1" id="algebra">Алгебра</button></li>
+                    <li><button onclick="geometry()" class="unit_1" id="geometry">Геометрия</button></li>
+                    <li><button onclick="physics()" class="unit_1" id="physics">Физика</button></li>
+                    <li><button onclick="chemrstry()" class="unit_1" id="chemrstry">Химия</button></li>
+                    <li>
+                        <div id="search_block" class="unit_1 last_1"><button onclick="search()" id="search">
+                            <input id="pole" type="search">
+                        </button>
+                        <button onclick="find()">O</button>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>      
+            <div id="gran">
+                <div id="pole_1">{% for el in formula %}
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div>{% endfor %}</div>
+                <div hidden id="pole_2">{% for el in formula %}{% if el.category == 'Алгебра'%}
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_3">{% for el in formula %}{% if el.category == 'Геометрия'%}
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_4">{% for el in formula %}{% if el.category == 'Физика'%}
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_5">{% for el in formula %}{% if el.category == 'Химия'%}
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_6">{% for el in formula %}
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endfor %}</div>
+            </div>
+            <div id="gran">
+                <div id="pole_1_2">{% for el in formula %}
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div>{% endfor %}</div>
+                <div hidden id="pole_2_2">{% for el in formula %}{% if el.category == 'Алгебра'%}
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_3_2">{% for el in formula %}{% if el.category == 'Геометрия'%}
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_4_2">{% for el in formula %}{% if el.category == 'Физика'%}
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_5_2">{% for el in formula %}{% if el.category == 'Химия'%}
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+                <div hidden id="pole_6_2">{% for el in formula %}
+                    <div id="imeg"><div id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endfor %}</div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 

@@ -9,30 +9,39 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <div id="vr">
-        <h3 id="name">Portfolio</h3>
+    <nav id="vr">
+        <h3 id="name">Portfolio
+        <ul id="menu">
+            <li id="home"><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'posts' %}">Форум</a></li>
+            <li>{% if user.is_authenticated %}
+                <a href="{% url 'personal_area' %}">{{ user.username }}</a>
+            {% else %}
+                <a href="{% url 'login' %}">Войти</a>
+            {% endif %}</li>
+            <li><a href="{% url 'logout' %}">B</a></li>
+            <hr id="hr">
+        </ul></h3>
         <div id="block_1">
             <div id="zagalovok">
-                <a href="{% url 'home' %}">Главная</a>
+                <a class="hidd" href="{% url 'home' %}">Главная</a>
                 <!-- <a href="{% url 'profile' %}">Предмет</a> -->
-                <a href="{% url 'forum' %}">Новости</a>
+                <a  class="hidd" href="{% url 'posts' %}">Форум</a>
                 {% if user.is_authenticated %}
                     <a href="{% url 'personal_area' %}">{{ user.username }}</a>
                 {% else %}
                     <a href="{% url 'login' %}">Войти</a>
                 {% endif %}
-                <a href="{% url 'logout' %}">B</a>
+                <a  class="hidd" href="{% url 'logout' %}">B</a>
             </div>
         </div>
-    </div>
-    <!-- <div id="main"> -->
+    </nav>
         {% block body %}
         {% endblock %}
-    <!-- </div> -->
     <div id="vr_2">
         <div id="end">
             <ul id="ending">
-                <li>
+                <li id="me">
                     <h3>О нас</h3>
                     <a target="_blank" href="">Отзиви</a>
                 </li>
@@ -52,7 +61,11 @@
                         </ul>
                     </div> 
                 </li>
-                <li><h3>Реклама</h3></li>
+                <li id="reck"><h3>Реклама</h3>
+                    <ul>
+                        <li>jyfjhvmjf</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

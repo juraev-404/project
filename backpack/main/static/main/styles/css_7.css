@@ -1,0 +1,72 @@
+#add_block {
+    width: 600px;
+}
+
+.form {
+    margin: 100px auto;
+    /* width: 650px; */
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 300px;
+    float: left;
+    background-color: black;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid rgb(138, 138, 138);
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+textarea {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 600px;
+    background-color: black;
+    border: 1px solid rgb(138, 138, 138);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin: 50px auto;
+    resize: none;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+#add {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: 1px solid rgb(138, 138, 138);
+    float: right;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+textarea::-webkit-scrollbar {
+    background: black;
+}
+
+@media screen and (max-width: 700px) {
+    #add_block {
+        width: 99%;
+    }
+    textarea {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+    #add {
+        border: none;
+    }
+    input {
+        border-radius: 0 ;
+        border: none;
+    }
+}

@@ -1,0 +1,45 @@
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+    margin-left: 50px;
+}
+
+#block_2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+@media screen and (max-width: 950px) {
+    #block_2 h2 {
+        max-width: ;
+    }
+    h1 {
+        color: white;
+        font-size: 18px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    h2 {
+        color: white;
+        margin-left: 0px;
+        font-size: 14px;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #fm {
+        font-size: 14px;
+        width: 90%;
+        overflow-y: hidden;
+    }
+    #fm::-webkit-scrollbar {
+        height: 5px;
+    }
+}

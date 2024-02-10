@@ -1,0 +1,51 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}{{ post.name }}{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'main/styles/css_6.css' %}">
+{% endblock %}
+
+{% block body %}
+<main>
+    <div class="post">
+        <h2>{{ post.name }}</h2>
+        <div class="txt">
+            <p>{{ post.content }}</p>
+        </div>
+        <hr>
+        <span>{{ post.date }}</span><br>
+        <span>{{ post.author }}</span>
+    </div>
+    <div id="comment">
+        <div id="T">
+            <form method="post">
+                {% csrf_token %}
+                <div id="T">{{ form.comment_text }}
+                <input type="hidden" name="post" value="{{ post.id }}">
+                <input type="hidden" name="comment_author" value="{{ user.username}}">
+                {{ form.date_add }}
+                <button>Добавить</button>
+            </form>
+        </div>
+        <hr>
+        <div id="comment_list">
+            {% for item in post.post_comment.all %}
+            <div>
+                <div id="comments">
+                    {{ item.comment_text }}<br>
+                </div>
+                <div id="info_com">
+                    {{ item.comment_author }}
+                    <span>{{ item.date_add }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block javascript %}{% endblock %}

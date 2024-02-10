@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}{{ formula.name }}{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'main/styles/css_8.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="block_2">
+        <h1>{{ formula.name }}</h1>
+        
+            <h2><div id="fm"><pre>{{ formula.formula | safe}}</pre></div></h2><hr>   
+        
+    </div>
+{% endblock %}
+
+{% block javascript %}{% endblock %}

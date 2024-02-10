@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import get_user_model
-
-
+from django.forms import ModelForm, TextInput, Textarea, DateTimeInput
 
 class LoginUserForm(AuthenticationForm):
     username = forms.CharField(label='Логин:', widget=forms.TextInput(attrs={'class': 'form_imput'}))

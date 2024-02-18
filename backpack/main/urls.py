@@ -8,3 +8,4 @@ urlpatterns = [
     path('personal_area', views.personal_area, name = 'personal_area'),
     path('forum', views.forum, name = 'forum')
 ]
+

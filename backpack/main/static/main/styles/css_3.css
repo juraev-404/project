@@ -5,6 +5,12 @@
     /* justify-content: center; */
 }
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #glass {
     width: 500px;
     /* height: 400px; */
@@ -58,9 +64,20 @@ h3 {
 @media screen and (max-width: 300px) {
     #body {
         font-size: 14px;
+        width: 100%;
     }
     #pole {
         width: 245px;
         font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #body, #post, #glass {
+        font-size: 14px;
+        width: 100%;
+    }
+    .box {
+        margin: 0;
     }
 }

@@ -10,13 +10,23 @@ h2 {
 #block_2 {
     max-width: 1000px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 300px;
+}
+
+#fm {
+    /* width: 90%; */
+    overflow-y: hidden;
+}
+#fm::-webkit-scrollbar {
+    height: 15px;
+    background: transparent;
+}
+
+#fm::-webkit-scrollbar-thumb {
+    background: white;
 }
 
 @media screen and (max-width: 950px) {
-    #block_2 h2 {
-        max-width: ;
-    }
     h1 {
         color: white;
         font-size: 18px;

@@ -6,6 +6,12 @@
 {% endblock %}
 {% block body %}
 <div id="less">
+    <div id="block_10">            
+        <button onclick="algebra()" class="unit_2">Алгебра</button>
+        <button onclick="geometry()" class="unit_2">Геометрия</button>
+        <button onclick="physics()" class="unit_2">Физика</button>
+        <button onclick="chemrstry()" class="unit_2">Химия</button>
+    </div>
     <div id="block_8">
         <ul id="block_9">
             <li><button onclick="alll()" class="unit_1 first_1" id="all">Все</button></li>
@@ -24,147 +30,59 @@
     </div>
     <div id="gran">
         <div id="pole_1">{% for el in formula %}
-            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div>{% endfor %}</div>
+            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div>{% endfor %}</div>
         <div hidden id="pole_2">{% for el in formula %}{% if el.category == 'Алгебра'%}
-            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_3">{% for el in formula %}{% if el.category == 'Геометрия'%}
-            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_4">{% for el in formula %}{% if el.category == 'Физика'%}
-            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div> {% endif %}{% endfor %}</div>
+            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_5">{% for el in formula %}{% if el.category == 'Химия'%}
-            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_6">{% for el in formula %}
-            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endfor %}</div>
+            <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endfor %}</div>
     </div>
     <div id="gran">
         <div id="pole_1_2">{% for el in formula %}
-            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div>{% endfor %}</div>
+            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div>{% endfor %}</div>
         <div hidden id="pole_2_2">{% for el in formula %}{% if el.category == 'Алгебра'%}
-            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_3_2">{% for el in formula %}{% if el.category == 'Геометрия'%}
-            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_4_2">{% for el in formula %}{% if el.category == 'Физика'%}
-            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name }}</a></button></div> {% endif %}{% endfor %}</div>
+            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_5_2">{% for el in formula %}{% if el.category == 'Химия'%}
-            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endif %}{% endfor %}</div>
+            <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
         <div hidden id="pole_6_2">{% for el in formula %}
-            <div id="imeg"><div id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">{{ el.name}}</a></button></div> {% endfor %}</div>
+            <div id="imeg"><div id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endfor %}</div>
     </div>
 </div>
-    <!-- <div id="body">
-        <div id="block_2">
-            <div id="block_3">
-                <ul id="block_4">
-                    <li><button id="unit_1" class="first">основа</button></li>
-                    <li><button id="unit_1">формулы</button></li>
-                    <li><button id="unit_1">термини</button></li>
-                    <li><button id="unit_1" class="last_1">заметки</button></li>
-                </ul>
-                <div id="search"><input id="pole" type="search"></div>
-            </div>
-            <div id="block_5">
-                <div id="gran">
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                </div>
-                <div id="gran">
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                </div>
-            </div>    
-        </div>
-    </div> -->
-    <div>
-        <!-- <embed id="block_7" width="100%" height="100%" 
-        src="{% static 'main/files/HTML5-Карманный справочник.pdf' %}" type="application/pdf" > -->
+<div id="block_2">
+    
+    <div id="ins">
+        <h1>Мои посты</h1>
     </div>
-    <!-- <div id="vr_3">
-        <div id="end_1">
-        <ul id="ending_1">
-            <li><a target="_blank" href="">О нас</a></li>
-            <li><a target="_blank" href="">Отзиви</a></li>
-            <li><a target="_blank" href="">Контакти</a></li>
-            <li><a target="_blank" href="">Реклама</a></li>
-        </ul>
-    </div></div> -->
+    <h3 id="btt"><a href="{% url 'add_post' %}">+ Добавить пость</a></h3>
+</div>
+
+{% for item in post %}
+    {% if item.author == user.username %}
+        <div class="post">
+            <h2>{{ item.name }}</h2>
+            <hr>
+            <div id="information">
+                {{ item.date }}
+                <div>
+                    <a href="{% url 'post' item.id %}" class="detailes">Подробнее</a>
+                    <a href="{% url 'update' item.id %}" class="update">Изменить</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+    <!-- <div>
+        <embed id="block_7" width="100%" height="100%" 
+        src="{% static '' %}" type="application/pdf" >
+    </div> -->
 {% endblock %}
 {% block javascript %}<script src="{% static 'main/javascript/js_2.js' %}"></script>{% endblock %}
-
-<!-- {% load static %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'main/styles/css_2.css' %}">
-    <title>Страница №2</title>
-</head>
-<body>
-    <div id="vr">
-        <h3 id="name">NAME</h3>
-        <div id="block_1"><ul id="zagalovok">
-            <li><a href="{% url 'home' %}" target="_top">Главная</a></li>
-            <li><a target="_parent" href="#">Предмет</a></li>
-            <li><a target="_parent" href="#">Новости</a></li>
-            <li><a target="_parent" href="#">Вход</a></li>
-        </ul>
-        </div></div>
-        <div id="body">
-            <div id="block_2">
-                <div id="block_3">
-                    <ul id="block_4">
-                        <li><button id="unit_1" class="first">основа</button></li>
-                        <li><button id="unit_1">формулы</button></li>
-                        <li><button id="unit_1">термини</button></li>
-                        <li><button id="unit_1" class="last_1">заметки</button></li>
-                    </ul>
-                    <div id="search"><input id="pole" type="search"></div>
-                </div>
-                <div id="block_5">
-                    <div id="gran">
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    </div>
-                    <div id="gran">
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div> 
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                        <div id="imeg"><img id="sl" src="images/1.png" alt=""><button onclick="boock()" id="block_6">HTML</button></div>
-                    </div>
-                </div>    
-            </div>
-        </div>
-        <div>
-            <embed id="block_7" width="100%" height="100%" 
-            src="files/churaev_tk_naksha_sinfi_89.pdf" type="application/pdf" >
-        </div>
-        <div id="vr_2">
-            <div id="end">
-            <ul id="ending">
-                <li><a target="_blank" href="">О нас</a></li>
-                <li><a target="_blank" href="">Отзиви</a></li>
-                <li><a target="_blank" href="">Контакти</a></li>
-                <li><a target="_blank" href="">Реклама</a></li>
-            </ul>
-        </div></div>
-<script src="{% static 'main/javascript/js_2.js' %}"></script>
-</body>
-</html> -->

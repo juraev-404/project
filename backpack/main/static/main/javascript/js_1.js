@@ -1,20 +1,20 @@
 var imgs = document.getElementById('slide');
-var i =1;
-var indecator_6 = document.getElementById('indecator_6');
+var i = 1;
+var indecator_4 = document.getElementById('indecator_4');
 var indecator_1 = document.getElementById('indecator_1');
 
 function start() {
-    timerId = setInterval(slide, 1500,);
+    timerId = setInterval(slide, 3000,);
     timerId2 = setInterval(txt_slde, 3000)
 }
 
 function slide() {
-    if(i < 6) {
+    if(i < 4) {
         i++;
     }
     else {
         i = 1;
-        indecator_6.style.background = '#ffffff33'
+        indecator_4.style.background = '#ffffff33'
     }
     imgs.src = 'static/main/images/' + i + '.png';
     var indecator = document.getElementById('indecator_' + i);
@@ -24,12 +24,12 @@ function slide() {
 }
 
 function right() {
-    if(i < 6) {
+    if(i < 4) {
         i++
     }
     else {
         i = 1
-        indecator_6.style.background = '#ffffff33'
+        indecator_4.style.background = '#ffffff33'
     }
     imgs.src = 'static/main/images/' + i + '.png';
     var indecator = document.getElementById('indecator_' + i);
@@ -44,7 +44,7 @@ function left() {
         i--
     }
     else {
-        i = 6
+        i = 4
         indecator_1.style.background = '#ffffff33'
     }
     imgs.src = 'static/main/images/' + i + '.png';

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from .models import Formula
+from news.models import Post
 from django.views.generic import DetailView
 # from django.contrib.auth.mixins import DataMixin
 
@@ -19,8 +20,9 @@ class FormulaDetail(DetailView):
     context_object_name = 'formula'
 
 def personal_area(request):
+    post = Post.objects.order_by('-date')
     formula = Formula.objects.order_by()
-    return render(request, 'main/index_2.html', {'formula':formula})
+    return render(request, 'main/index_2.html', {'formula':formula, 'post': post})
 
 def forum(request):
     return render(request, 'main/index_4.html')

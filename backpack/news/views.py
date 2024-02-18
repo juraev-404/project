@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import Post
 from django.http import HttpResponse
-from django.views.generic import DetailView, CreateView
+from django.views.generic import DetailView, CreateView, UpdateView
 from .forms import PostForm, CommentForm
 from django.urls import reverse, reverse_lazy
 from django.views.generic.edit import FormMixin
 
 def posts(request):
-    posts = Post.objects.order_by('-date')
+    posts = Post.objects.order_by('-date')[:50]
     return render(request, 'main/index_4.html', {'posts': posts})
 
 class PostDetailView(FormMixin, DetailView):
@@ -30,7 +30,7 @@ class PostDetailView(FormMixin, DetailView):
             post = request.POST.get('post')
             return redirect('/post/' + str(post))
         else:
-            error = 'bug'
+            error = 'Вы не загегестрировани!'
             return HttpResponse(error)
 
 
@@ -39,3 +39,9 @@ class PostAdd(CreateView):
     form_class = PostForm
     template_name = 'main/index_7.html'
     success_url = reverse_lazy('posts')
+
+class PostUpdateView(UpdateView):
+    model = Post
+    template_name = 'main/index_7.html'
+    fields = ['name', 'content', 'author']
+    success_url = reverse_lazy('personal_area')

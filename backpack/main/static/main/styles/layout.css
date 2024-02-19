@@ -139,7 +139,7 @@ h3:hover > #menu  {
         display: flex;
         flex-direction: column;
         height: auto;
-        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 35), rgb(0, 0, 50), rgb(0, 0, 35), rgb(0, 0, 0)) !important;
     }
     #end {
         background-color: rgb(0, 0, 0);

@@ -15,7 +15,10 @@ body {
     margin: 0;
     padding: 0;
 }
-
+#exit_2 {
+    width: 15px;
+    max-height: 15px !important;
+}
 main {
     min-height: 80vh;
 }
@@ -57,7 +60,9 @@ main {
     float: left;
     font-size: 20px;
     color: white;
+    user-select: none;
 }
+
 #zagalovok a {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -80,6 +85,18 @@ h3 {
 h3:hover > #menu  {
     display: none;
     background-color: black;
+}
+#menu_burger {
+    width: 15px;
+    height: 15px;
+    display: none;
+    margin-right: 3px;
+}
+#mb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 #vr_2 {
     display: flex;
@@ -133,13 +150,18 @@ h3:hover > #menu  {
     width: 100%;
     margin-top: 10px;
 }
+#sp, #me {
+    max-width: 350px !important;
+    margin-right: 5vh !important;
+}
+
 @media screen and (max-width: 450px) {
     html {
         background-size: 100%;
         display: flex;
         flex-direction: column;
         height: auto;
-        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 70), rgb(0, 0, 100), rgb(0, 0, 70), rgb(0, 0, 0)) !important;
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 55), rgb(0, 0, 85), rgb(0, 0, 55), rgb(0, 0, 0)) !important;
     }
     #end {
         background-color: rgb(0, 0, 0);
@@ -179,7 +201,7 @@ h3:hover > #menu  {
     }
     #menu {
         height: 100vh;
-        width: 200px;
+        width: 280px;
         display: none;
         list-style: none;
         position: absolute;
@@ -187,14 +209,23 @@ h3:hover > #menu  {
         top: 0;
         margin-left: -10px;
         z-index: 10;
+        background-color: black;
+    }
+    #menu_burger{
+        display: block;
     }
     #menu li {
         min-width: 180px;
         display: list-item;
         float: none;
+        background-color: black;
     }
     #home {
         margin-top: 40px;
+    }
+    #exit {
+        width: 15px;
+        max-height: 15px !important;
     }
     h3:hover > #menu  {
         display: inherit;
@@ -232,6 +263,11 @@ h3:hover > #menu  {
         height: 160px;
         min-height: 160px;
     }
+    #sp, #me {
+        max-width: 90vw;
+        margin-right: 0;
+    }
+    
 }
 @media screen and (max-width: 850px){
     #kontacts {
@@ -241,8 +277,8 @@ h3:hover > #menu  {
         margin-right: -5vw;
         margin-bottom: 10px;
     }
-    #me {
-        width: 70px !important;
-        margin-right: 5vh !important;
+    #me, #sp {
+        max-width: 250px;
+        margin-right: 0;
     }
 }

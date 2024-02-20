@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav id="vr">
-        <h3 id="name">Portfolio
+        <h3 id="name"><div id="mb"><img id="menu_burger" src="{% static 'main/images/menu.png'%}" alt=""> Portfolio</div>
         <ul id="menu">
             <li id="home"><a href="{% url 'home' %}">Главная</a></li>
             <li><a href="{% url 'posts' %}">Форум</a></li>
@@ -20,20 +20,19 @@
             {% else %}
                 <a href="{% url 'login' %}">Войти</a>
             {% endif %}</li>
-            <li><a href="{% url 'logout' %}">B</a></li>
+            <li><a href="{% url 'logout' %}"><img id="exit" src="{% static 'main/images/exit.png'%}" alt=""></a></li>
             <hr id="hr">
         </ul></h3>
         <div id="block_1">
             <div id="zagalovok">
                 <a class="hidd" href="{% url 'home' %}">Главная</a>
-                <!-- <a href="{% url 'profile' %}">Предмет</a> -->
                 <a  class="hidd" href="{% url 'posts' %}">Форум</a>
                 {% if user.is_authenticated %}
                     <a href="{% url 'personal_area' %}">{{ user.username }}</a>
                 {% else %}
                     <a href="{% url 'login' %}">Войти</a>
                 {% endif %}
-                <a  class="hidd" href="{% url 'logout' %}">B</a>
+                <a  class="hidd" href="{% url 'logout' %}"><img id="exit_2" src="{% static 'main/images/exit.png'%}" alt=""></a>
             </div>
         </div>
     </nav>
@@ -45,26 +44,22 @@
         <div id="end">
             <ul id="ending">
                 <li id="me">
-                    <h3>О нас</h3>
-                    <a target="_blank" href="">Отзиви</a>
+                    <h3>О сайте</h3>
+                    <span id="sp">На сайте находятся формулы по алгебре, геометрии, физике и химии.</span>
                 </li>
                 <li>
-                    <h3>Контакти</h3>
+                    <h3>Контакты</h3>
                     <div id="kontacts">
                         <ul>
-                            <li>Эл.почта: portfolio@gmail.com</li>
+                            <li>Эл.почта: <a href="mailto:portfolio.io.001@gmail.com">portfolio@gmail.com</a></li>
                         </ul>   
-                        <ul>
-                            <li><a href="">Whatsap</a></li>
-                            <li><a href="">Telegram</a></li>
-                        </ul>
                     </div> 
                 </li>
-                <li id="reck"><h3>Реклама</h3>
+                <!-- <li id="reck"><h3>Реклама</h3>
                     <ul>
-                        <li>jyfjhvmjf</li>
+                        <li></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

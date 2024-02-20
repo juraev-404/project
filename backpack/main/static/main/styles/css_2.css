@@ -150,6 +150,8 @@ embed {
 .unit_2{
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
+    background: rgba(0, 0, 0, 0.250);
+    color: #ffffff;
 }
 #block_10 {
     display: none;
@@ -300,6 +302,7 @@ hr {
     color: white;
     border-bottom: 3px solid white;
     padding: 10px;
+    margin-bottom: 10px;
     text-align: justify;
 }
 
@@ -339,7 +342,7 @@ hr {
         transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         order: 1;
         color: white;
-        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 60), rgb(0, 0, 80), rgb(0, 0, 60), rgb(0, 0, 0)) !important;
     }
     
     #imeg:hover > #sl {

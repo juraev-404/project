@@ -74,4 +74,7 @@ textarea::-webkit-scrollbar {
         border: none;
         width: 90%;
     }
+    #menu {
+        margin-top: 20px;
+    }
 }

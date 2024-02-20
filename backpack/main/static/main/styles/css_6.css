@@ -73,7 +73,11 @@ span {
 textarea {
     margin-bottom: 10px;
 }
-
+button {
+    background: linear-gradient(90deg, green 80%, black) !important;
+    border-radius: 5px;
+    color: white;
+}
 @media screen and (max-width: 950px) {
     .post {
         width: 100%;

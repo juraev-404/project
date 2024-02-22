@@ -516,7 +516,7 @@ hr {
     order: 1;
     padding: 1px;
     color: white;
-    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 55), rgb(0, 0, 75), rgb(0, 0, 55), rgb(0, 0, 0)) !important;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
 }
 
 #imeg:hover > #sl {
@@ -1168,5 +1168,8 @@ hr {
     .container::before {
         width: 3vh;
         height: 3vh;
+    }
+    #sl {
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 55), rgb(0, 0, 75), rgb(0, 0, 55), rgb(0, 0, 0)) !important;
     }
 }

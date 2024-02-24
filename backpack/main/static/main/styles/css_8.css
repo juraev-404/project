@@ -37,12 +37,19 @@ h2 {
     h2 {
         color: white;
         margin-left: 0px;
-        font-size: 14px;
+        font-size: 18px;
         width: 100%;
         padding: 0 10px;
     }
+    #fm {
+        font-size: 18px;
+    }
 }
-
+@media screen and (max-width: 700px) {
+    #fm {
+        font-size: 16px;
+    }
+}
 @media screen and (max-width: 450px) {
     #fm {
         font-size: 14px;

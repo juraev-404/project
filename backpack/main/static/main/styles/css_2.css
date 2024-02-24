@@ -46,6 +46,11 @@ embed {
     background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
 }
 
+#srh {
+    width: 15px;
+    height: 15px;
+}
+
 #imeg:hover > #sl {
     transform: translateY(-85%);
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -342,7 +347,7 @@ hr {
         transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         order: 1;
         color: white;
-        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 60), rgb(0, 0, 80), rgb(0, 0, 60), rgb(0, 0, 0)) !important;
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
     }
     
     #imeg:hover > #sl {
@@ -633,5 +638,8 @@ hr {
     }
     .update {
         margin: 10px 10px;
+    }
+    #sl {
+        background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 55), rgb(0, 0, 75), rgb(0, 0, 55), rgb(0, 0, 0)) !important;
     }
 }

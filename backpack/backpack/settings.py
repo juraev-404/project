@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS=["https://*.portfolio7.ru"]
 ROOT_URLCONF = 'backpack.urls'
 
 TEMPLATES = [

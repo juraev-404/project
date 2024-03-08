@@ -4,8 +4,8 @@ from django.contrib.auth import get_user_model
 from django.forms import ModelForm, TextInput, Textarea, DateTimeInput
 
 class LoginUserForm(AuthenticationForm):
-    username = forms.CharField(label='Логин:', widget=forms.TextInput(attrs={'class': 'form_imput'}))
-    password = forms.CharField(label='Пароль:', widget=forms.PasswordInput(attrs={'class': 'form_imput'}))
+    username = forms.CharField(label='Логин:', widget=forms.TextInput(attrs={'class': 'form_imput', 'placeholder': 'или email'}))
+    password = forms.CharField(label='Пароль:', widget=forms.PasswordInput(attrs={'class': 'form_imput', 'id': 'password'}))
 
     class Meta: 
         model = get_user_model
@@ -13,8 +13,8 @@ class LoginUserForm(AuthenticationForm):
 
 class RegistrationUserForm(UserCreationForm):
     username = forms.CharField(label='Логин:',  min_length = 4)
-    password1 = forms.CharField(label='Пароль:', widget=forms.PasswordInput(), min_length = 8)
-    password2 = forms.CharField(label='Повтор пароля:', widget=forms.PasswordInput())
+    password1 = forms.CharField(label='Пароль:', widget=forms.PasswordInput(attrs={'id': 'pass1'}), min_length = 8)
+    password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'id': 'pass2'}))
 
     class Meta:
         model = get_user_model()

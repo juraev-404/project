@@ -19,13 +19,32 @@
                         <h3 id="pole"><label for="{{ el.id_for_label }}">{{ el.label }}</label><span>{{ el }}</span></h3>
                         <div id="form_error">{{ el.errors }}</div>
                     {% endfor%}
+                    <img id="eye" onclick="pass()" src="{% static 'main/images/open.png'%}" alt="">
                     <div id="form_error">{{ form.non_field_errors }}</div><br>
                     <button id="button">Войты</button>
                     <h5><a href="{% url 'register' %}">Регистратсия</a></h5>
                 </div>
             </div>
         </form>
+        <div class="XfdGER348954"></div>
+	<script>
+			window.k_init = window.k_init || [];
+			k_init.push({
+					id: 'XfdGER348954',
+					type: 'bn',
+					domain: 'hdbkome.com',
+					refresh: false,
+					next: 0
+			});
+			
+			var s = document.createElement('script');
+			s.setAttribute('async', true);
+			s.setAttribute('charset', 'utf-8');
+			s.setAttribute('data-cfasync', false);
+			s.src = 'https://hdbkome.com/4tqrea24.js'; 
+			document.head && document.head.appendChild(s);
+	</script>
     </div>
 {% endblock %}
 
-{% block javascript %}{% endblock %}
+{% block javascript %}<script src="{% static 'main/javascript/js_3.js' %}"></script>{% endblock %}

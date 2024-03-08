@@ -17,7 +17,11 @@
                     {% csrf_token %}
                     <h1>Регистрация</h1>
                     {% for el in form %}
-                        <h3 id="pole"><label for="{{ el.id_for_label }}">{{ el.label }}</label><span>{{ el }}</span></h3>
+                        {% if el.label == 'Пароль:' %}
+                            <div><h3 id="pole"><label for="{{ el.id_for_label }}">{{ el.label }}</label><span>{{ el }}</span><img id="eye2" onclick="pass3()" src="{% static 'main/images/open.png'%}" alt=""></h3></div>
+                        {% else %}
+                            <h3 id="pole"><label for="{{ el.id_for_label }}">{{ el.label }}</label><span>{{ el }}</span></h3>
+                        {% endif %}
                         <div id="form_error">{{ el.errors }}</div>
                     {% endfor%}
                     <div id="form_error">{{ form.non_field_errors }}</div>
@@ -29,4 +33,4 @@
     </div>
 {% endblock %}
 
-{% block javascript %}{% endblock %}
+{% block javascript %}<script onload="cycle()" src="{% static 'main/javascript/js_3.js' %}"></script>{% endblock %}

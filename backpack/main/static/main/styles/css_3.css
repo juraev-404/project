@@ -52,6 +52,14 @@ main {
     height: 30px;
 }
 
+#eye {
+    width: 20px;
+    height: 20px;
+    margin-top: -39px;
+    margin-right: -230px;
+    z-index: 5;
+}
+
 @media screen and (max-width: 300px) {
     #body {
         font-size: 14px;
@@ -60,6 +68,10 @@ main {
     #pole {
         width: 245px;
         font-weight: bold;
+    }
+    #eye {
+        margin-right: -220px;
+
     }
 }
 
@@ -73,5 +85,8 @@ main {
     }
     .box {
         width: 100vw;
+    }
+    #eye {
+        margin-top: -37px;
     }
 }

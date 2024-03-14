@@ -32,17 +32,17 @@
                 <a href="{% url 'post' el.id %}" class="detailes">Подробнее</a>
             </div>
         </div>
-        <!-- Yandex.RTB R-A-6588087-2 -->
-        <script>
-            window.yaContextCb.push(()=>{
-                Ya.Context.AdvManager.render({
-                    "blockId": "R-A-6588087-2",
-                    "type": "rewarded",
-                    "platform": "desktop"
-                })
-            })
-        </script>
     {% endfor %}
+    <!-- Yandex.RTB R-A-6588087-2 -->
+    <script>
+        window.yaContextCb.push(()=>{
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-6588087-2",
+                "type": "rewarded",
+                "platform": "desktop"
+            })
+        })
+    </script>
 {% endblock %}
 
 {% block javascript %}{% endblock %}

@@ -38,4 +38,3 @@ class RegistrationUser(CreateView, FormMixin):
         return response
     def get_success_url(self):
         return self.success_url
-    

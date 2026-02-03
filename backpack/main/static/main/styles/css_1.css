@@ -156,6 +156,8 @@
     transition: 1s cubic-bezier(0.0005, -0.0005, 0.0005, 0.0005);
 }
 
+
+
 #block_2 {
     justify-content: center;
     align-items: center;
@@ -495,7 +497,7 @@ hr {
     flex-direction: column;
     box-shadow: 3px 3px 10px 3px;
     flex-basis: 25%;
-
+    
 }
 
 #imeg.frl {
@@ -516,6 +518,8 @@ hr {
     order: 1;
     padding: 1px;
     color: white;
+    pointer-events: auto;
+    z-index: 2;
     background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
 }
 
@@ -523,6 +527,7 @@ hr {
     transform: translateY(-85%);
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: -1px 3px 10px #000000;
+    pointer-events: none;
 }
 
 #block_12 {
@@ -532,6 +537,8 @@ hr {
     border-radius: 10px;
     background: linear-gradient(45deg, rgb(0, 0, 230), black);
     color: white;
+    margin-top: 20px;
+
 }
 
 #block_12 a {
@@ -543,9 +550,25 @@ hr {
 #imeg:hover > #block_12 {
     display: flex;
     transition: 0.5s;
-    margin-top: -50px;
-    margin-bottom: 50px;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 10px 5px #000000, -5px -5px 10px -5px #000000;
+
 }
+
+.add-btn {
+    opacity: 0;
+    pointer-events: none;   /* 🔴 ВАЖНО */
+    transition: opacity 0.3s ease 1s;
+    z-index: 1;
+}
+
+#imeg:hover > .add-btn {
+    opacity: 1;
+    pointer-events: auto;   /* ✅ теперь кнопка кликабельна */
+}
+
+
 
 #gran {
     margin: 10px auto;
@@ -623,6 +646,22 @@ hr {
     color: rgb(0, 0, 0);
 }
 
+.unit_2{
+    
+    color: #ffffff;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    outline: none;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px;
+}
+#block_10 {
+    display: none;
+}
+
 #algebra {
     border-bottom-left-radius: 15px;
 }
@@ -650,7 +689,15 @@ hr {
     border: none;
 }
 
+#search_2 {
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    /* margin-left: 5px; */
+    border-radius: 5px;
+}
+
 #srh {
+    margin-top: 3px;
     width: 15px;
     height: 15px;
 }
@@ -1006,8 +1053,10 @@ hr {
     #imeg:hover > #block_12 {
         display: flex;
         transition: 0.5s;
-        margin-top: -50px;
-        margin-bottom: 50px;
+        margin-top: -30px;
+        margin-bottom: 40px;
+        box-shadow: 5px 5px 10px 5px #000000, -5px -5px 10px -5px #000000;
+
     }
     
     #gran {
@@ -1077,6 +1126,8 @@ hr {
         transition: 0.5s;
         padding: 0 ;
     }
+
+    
     
     #algebra {
         border-bottom-left-radius: 15px;
@@ -1141,6 +1192,9 @@ hr {
 @media screen and (max-width: 700px) {
     .unit_1 {
         display: none;
+    }
+    #block_10 {
+        display: block;
     }
     #gran {
         min-height: 150px !important;

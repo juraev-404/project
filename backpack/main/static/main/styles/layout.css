@@ -48,7 +48,24 @@ main {
     height: 4vh;
 }
 #block_1 {
+    /* position: fixed; */
     width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    transition: transform 0.3s ease;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+
+
+#block_1.hide {
+    transform: translateY(-100%);
 }
 
 #zagalovok {
@@ -57,10 +74,12 @@ main {
     float: right;
 }
 #name {
+    position: relative;
     float: left;
     font-size: 20px;
     color: white;
     user-select: none;
+    z-index: 1000;
 }
 
 #zagalovok a {
@@ -81,6 +100,7 @@ h3 {
 }
 #menu {
     display: none;
+    z-index: 99999;
 }
 h3:hover > #menu  {
     display: none;
@@ -97,6 +117,7 @@ h3:hover > #menu  {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    z-index: 99999;
 }
 #vr_2 {
     display: flex;
@@ -210,7 +231,7 @@ h3:hover > #menu  {
         padding: 0;
         top: 0;
         margin-left: -10px;
-        z-index: 10;
+        z-index: 99999;
         background-color: black;
     }
     #menu_burger{
@@ -232,6 +253,7 @@ h3:hover > #menu  {
     h3:hover > #menu  {
         display: inherit;
         background-color: black;
+        z-index: 9999;
     }
     #menu li a:hover > #menu  {
         display: block;

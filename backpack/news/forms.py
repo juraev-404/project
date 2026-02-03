@@ -35,10 +35,12 @@ class CommentForm(ModelForm):
             'comment_text': Textarea(attrs = {
                 'placeholder': 'Коментарый',
                 'cols': '40',
-                'rows': '8'
+                'rows': '8',
+                'style': 'height: 50px;'
             }),
             # 'date_add': DateTimeInput(attrs = {
             #     # 'value': datetime.now(),
             #     'type': 'hidden'
             # })
         }
+

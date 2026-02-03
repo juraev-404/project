@@ -45,3 +45,4 @@ class PostUpdateView(UpdateView):
     template_name = 'main/index_7.html'
     fields = ['name', 'content', 'author']
     success_url = reverse_lazy('personal_area')
+    

@@ -21,7 +21,8 @@ class FormulaDetail(DetailView):
 
 def personal_area(request):
     post = Post.objects.order_by('-date')
-    formula = Formula.objects.order_by()
+    # formula = Formula.objects.order_by()
+    formula = Formula.objects.order_by().filter(users=request.user)
     return render(request, 'main/index_2.html', {'formula':formula, 'post': post})
 
 def forum(request):

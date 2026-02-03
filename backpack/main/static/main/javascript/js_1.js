@@ -401,6 +401,16 @@ function search() {
         search.style.color = '#fff';
 }
 
+const input = document.getElementById("pole");
+
+input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault(); // ⛔ блокируем submit
+        find();             // запускаем поиск
+    }
+});
+
+
 function find() {
     var word = document.getElementById('pole').value;
     const elements = document.getElementsByClassName('frl');

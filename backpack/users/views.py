@@ -7,6 +7,11 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView
 from django.views.generic.edit import FormMixin
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, redirect
+from .models import UserFormula
+from main.models import Formula
+from django.http import JsonResponse
 
 
 
@@ -38,3 +43,15 @@ class RegistrationUser(CreateView, FormMixin):
         return response
     def get_success_url(self):
         return self.success_url
+    
+
+
+
+
+@login_required
+def add_to_cabinet_ajax(request, formula_id):
+    if request.method == 'POST':
+        formula = get_object_or_404(Formula, id=formula_id)
+        formula.users.add(request.user)
+        return JsonResponse({'success': True})
+    return JsonResponse({'success': False}, status=400)

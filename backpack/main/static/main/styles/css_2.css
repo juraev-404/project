@@ -10,9 +10,9 @@ embed {
     transition: 0.3s;
 }
 #imeg {
-    display: flex;
+    /* display: flex; */
     margin: 1.5vw;
-    width: 160px !important;
+    width: 170px !important;
     height: 170px;
     align-items: center;
     justify-content: center;
@@ -22,12 +22,16 @@ embed {
     overflow: hidden;
     flex-direction: column;
     box-shadow: 3px 3px 10px 3px;
-    flex-basis: 25%;
+    /* flex-basis: 25%; */
 
 }
 
+.frl {
+    width: 270px;
+}
+
 #imeg.frl {
-    width: 160px;
+    width: 170px;
     display: flex;
 }
 
@@ -46,7 +50,14 @@ embed {
     background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 20), rgb(0, 0, 30), rgb(0, 0, 20), rgb(0, 0, 0)) !important;
 }
 
+#search_2 {
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
 #srh {
+    margin-top: 3px;
     width: 15px;
     height: 15px;
 }
@@ -74,9 +85,11 @@ embed {
 
 #imeg:hover > #block_12 {
     display: flex;
-    transition: 0.5s;
-    margin-top: -50px;
-    margin-bottom: 50px;
+    transition: 1s;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 10px 5px #000000, -5px -5px 10px -5px #000000;
+
 }
 
 #gran {
@@ -153,10 +166,15 @@ embed {
 }
 
 .unit_2{
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-    background: rgba(0, 0, 0, 0.250);
     color: #ffffff;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    outline: none;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px;
 }
 #block_10 {
     display: none;

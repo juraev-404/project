@@ -1,0 +1,32 @@
+#pole {
+    width: 330px;
+}
+
+#eye2 {
+    width: 20px;
+    height: 20px;
+    margin-right: -195px;
+    margin-top: 2px;
+    right: 200px;
+    z-index: 5;
+    position: absolute;
+}
+
+#pass2 {
+    display: none;
+}
+
+@media screen and (max-width: 350px) {
+    #pole {
+        width: 250px;
+    }
+
+    #body {
+        font-size: 10px !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    #eye2 {
+        margin-top: 0px;
+    }
+}

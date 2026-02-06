@@ -1,0 +1,62 @@
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+    margin-left: 50px;
+}
+
+#block_2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 300px;
+}
+
+#fm {
+    /* width: 90%; */
+    overflow-y: hidden;
+}
+#fm::-webkit-scrollbar {
+    height: 15px;
+    background: transparent;
+}
+
+#fm::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+@media screen and (max-width: 950px) {
+    h1 {
+        color: white;
+        font-size: 18px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    h2 {
+        color: white;
+        margin-left: 0px;
+        font-size: 18px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    #fm {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #fm {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 450px) {
+    #fm {
+        font-size: 14px;
+        width: 90%;
+        overflow-y: hidden;
+    }
+    #fm::-webkit-scrollbar {
+        height: 5px;
+    }
+}

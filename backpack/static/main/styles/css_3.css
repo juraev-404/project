@@ -1,0 +1,92 @@
+#body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#glass {
+    width: 500px;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 60px 0;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(100deg, rgb(0, 0, 0, .5), rgb(0, 0, 0, .5));
+    box-shadow: 0 10px 26px 0 rgb(0, 0, 0, .60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.box {
+    margin: 50px;
+}
+
+#pole {
+    width: 260px;
+    font-weight: bold;
+}
+
+#form_error {
+    color: red;
+    font-size: 16px;
+}
+
+#pole span {
+    float: right;
+}
+
+#button {
+    font-size: 20px;
+    background: linear-gradient(45deg, green, rgb(0, 70, 0));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+}
+
+#eye {
+    width: 20px;
+    height: 20px;
+    margin-top: -39px;
+    margin-right: -230px;
+    z-index: 5;
+}
+
+@media screen and (max-width: 300px) {
+    #body {
+        font-size: 14px;
+        width: 100%;
+    }
+    #pole {
+        width: 245px;
+        font-weight: bold;
+    }
+    #eye {
+        margin-right: -220px;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #body, #post, #glass {
+        font-size: 14px;
+        width: 100%;
+    }
+    .box {
+        margin: 0;
+    }
+    .box {
+        width: 100vw;
+    }
+    #eye {
+        margin-top: -37px;
+    }
+}

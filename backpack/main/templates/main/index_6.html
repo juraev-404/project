@@ -24,8 +24,6 @@
             <form method="post">
                 {% csrf_token %}
                 <div id="T">{{ form.comment_text }}
-                <input type="hidden" name="post" value="{{ post.id }}">
-                <input type="hidden" name="comment_author" value="{{ user.username}}">
                 {{ form.date_add }}
                 <button>Добавить</button>
             </form>

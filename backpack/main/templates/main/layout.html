@@ -33,7 +33,7 @@
                 {% else %}
                     <a href="{% url 'login' %}">Войти</a>
                 {% endif %}</li>
-                <li><a href="{% url 'logout' %}"><img id="exit" src="{% static 'main/images/exit.png'%}" alt=""></a></li>
+                {% if user.is_authenticated %}<li><form method="post" action="{% url 'logout' %}">{% csrf_token %}<button type="submit" aria-label="Выйти" style="border:0;background:transparent;padding:0;"><img id="exit" src="{% static 'main/images/exit.png'%}" alt=""></button></form></li>{% endif %}
                 <hr id="hr">
             </ul></h3>
             <div id="block_1">
@@ -45,7 +45,7 @@
                     {% else %}
                         <a href="{% url 'login' %}">Войти</a>
                     {% endif %}
-                    <a  class="hidd" href="{% url 'logout' %}"><img id="exit_2" src="{% static 'main/images/exit.png'%}" alt=""></a>
+                    {% if user.is_authenticated %}<form class="hidd" method="post" action="{% url 'logout' %}" style="display:inline;">{% csrf_token %}<button type="submit" aria-label="Выйти" style="border:0;background:transparent;padding:0;"><img id="exit_2" src="{% static 'main/images/exit.png'%}" alt=""></button></form>{% endif %}
                 </div>
             </div>
         </nav>

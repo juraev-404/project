@@ -7,7 +7,7 @@ from django.utils import timezone
 class PostForm(ModelForm):
     class Meta:
         model = Post
-        fields = ['name', 'content', 'author']
+        fields = ['name', 'content']
 
         widgets = {
             'name': TextInput(attrs = {
@@ -21,15 +21,12 @@ class PostForm(ModelForm):
             #     # 'value': datetime.now(),
             #     'type': 'hidden'
             # }),
-            'author': TextInput(attrs = {
-                'type': 'hidden'
-            })
         }
 
 class CommentForm(ModelForm):
     class Meta:
         model = Comment
-        fields = ['post', 'comment_author', 'comment_text']
+        fields = ['comment_text']
 
         widgets = {
             'comment_text': Textarea(attrs = {

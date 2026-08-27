@@ -5,6 +5,8 @@ from django.views.generic import DetailView, CreateView, UpdateView
 from .forms import PostForm, CommentForm
 from django.urls import reverse, reverse_lazy
 from django.views.generic.edit import FormMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.views import redirect_to_login
 
 def posts(request):
     posts = Post.objects.order_by('-date')[:50]
@@ -22,27 +24,35 @@ class PostDetailView(FormMixin, DetailView):
         return render(request, 'main/index_6.html', { 'comment_sort': b})
 
     def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect_to_login(request.get_full_path())
+
+        self.object = self.get_object()
         form = self.get_form()
-        eror = ''
         if form.is_valid():
-            form = CommentForm(request.POST)
-            form.save()
-            post = request.POST.get('post')
-            return redirect('/post/' + str(post))
-        else:
-            error = 'Вы не загегестрировани!'
-            return HttpResponse(error)
+            comment = form.save(commit=False)
+            comment.post = self.object
+            comment.comment_author = request.user.username
+            comment.save()
+            return redirect('post', pk=self.object.pk)
+        return self.form_invalid(form)
 
 
 
-class PostAdd(CreateView):
+class PostAdd(LoginRequiredMixin, CreateView):
     form_class = PostForm
     template_name = 'main/index_7.html'
     success_url = reverse_lazy('posts')
 
-class PostUpdateView(UpdateView):
+    def form_valid(self, form):
+        form.instance.author = self.request.user.username
+        return super().form_valid(form)
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     template_name = 'main/index_7.html'
-    fields = ['name', 'content', 'author']
+    fields = ['name', 'content']
     success_url = reverse_lazy('personal_area')
-    
+
+    def test_func(self):
+        return self.get_object().author == self.request.user.username

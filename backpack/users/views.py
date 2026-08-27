@@ -12,9 +12,11 @@ from django.shortcuts import get_object_or_404, redirect
 from .models import UserFormula
 from main.models import Formula
 from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 
 
 
+@login_required
 def user(request):
     return render(request, 'main/index_3.html')
     pass
@@ -25,6 +27,7 @@ class LoginUser(LoginView):
     def get_success_url(self):
         return reverse_lazy('personal_area')
 
+@require_POST
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('home'))

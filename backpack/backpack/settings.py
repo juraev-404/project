@@ -136,3 +136,6 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'users.authentication.EmailAuthBackend'
 ]
+
+LOGIN_URL = '/user/login/'
+LOGIN_REDIRECT_URL = '/personal_area'

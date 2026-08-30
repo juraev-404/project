@@ -76,6 +76,12 @@
         </div>
         <hr>
         <div id="less">
+            <div id="block_10">            
+                <button onclick="algebra()" class="unit_2">Алгебра</button>
+                <button onclick="geometry()" class="unit_2">Геометрия</button>
+                <button onclick="physics()" class="unit_2">Физика</button>
+                <button onclick="chemrstry()" class="unit_2">Химия</button>
+            </div>
             <div id="block_8">
                 <ul id="block_9">
                     <li><button onclick="alll()" class="unit_1 first_1" id="all">Все</button></li>
@@ -84,44 +90,91 @@
                     <li><button onclick="physics()" class="unit_1" id="physics">Физика</button></li>
                     <li><button onclick="chemrstry()" class="unit_1" id="chemrstry">Химия</button></li>
                     <li>
-                        <div id="search_block" class="unit_1 last_1"><button onclick="search()" id="search">
-                            <input id="pole" type="search">
-                        </button>
-                        <button onclick="find()"><img id="srh" src="static/main/images/search.png" alt=""></button>
+                        <div id="search_block" class="unit_1 last_1">
+                            <button onclick="search()" id="search">
+                            <form id="searchForm">
+                                <input id="pole" type="search">
+                                <button id="search_2" type="button" onclick="find()"><img id="srh" src="static/main/images/search.png" alt=""></button>
+                            </form>
+                            </button>
                         </div>
                     </li>
                 </ul>
             </div>
             <div id="gran">
                 <div id="pole_1">{% for el in formula %}
-                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div>{% endfor %}</div>
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div>
+                    <button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button> 
+                    <button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button>
+                </div>{% endfor %}</div>
                 <div hidden id="pole_2">{% for el in formula %}{% if el.category == 'Алгебра'%}
-                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div>
+                    <button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button> 
+                    <button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button>
+                </div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_3">{% for el in formula %}{% if el.category == 'Геометрия'%}
-                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div>
+                    <button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button> 
+                    <button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button>
+                </div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_4">{% for el in formula %}{% if el.category == 'Физика'%}
-                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div>
+                    <button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button> 
+                    <button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button>
+                </div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_5">{% for el in formula %}{% if el.category == 'Химия'%}
-                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name }}</div>
+                    <button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button> 
+                    <button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button>
+                </div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_6">{% for el in formula %}
-                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endfor %}</div>
+                    <div class="frl" id="imeg"><div class="frl_2" id="sl">{{ el.name}}</div>
+                    <button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button> 
+                    <button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button>
+                </div> {% endfor %}</div>
             </div>
             <div id="gran">
                 <div id="pole_1_2">{% for el in formula %}
-                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div>{% endfor %}</div>
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button><button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button></div>{% endfor %}</div>
                 <div hidden id="pole_2_2">{% for el in formula %}{% if el.category == 'Алгебра'%}
-                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button><button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button></div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_3_2">{% for el in formula %}{% if el.category == 'Геометрия'%}
-                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button><button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button></div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_4_2">{% for el in formula %}{% if el.category == 'Физика'%}
-                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button><button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button></div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_5_2">{% for el in formula %}{% if el.category == 'Химия'%}
-                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endif %}{% endfor %}</div>
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button><button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button></div> {% endif %}{% endfor %}</div>
                 <div hidden id="pole_6_2">{% for el in formula %}
-                    <div id="imeg"><div id="sl">{{ el.name}}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button></div> {% endfor %}</div>
+                    <div id="imeg"><div id="sl">{{ el.name }}</div><button id="block_12"><a href="{% url 'formula' el.id %}">Окрыть</a></button><button id="block_12" class="add-btn" data-id="{{ el.id }}">Добавить в ЛК</button></div> {% endfor %}</div>
             </div>
         </div>
     </div>
+
+<script>
+document.querySelectorAll('.add-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const formulaId = button.dataset.id;
+
+    fetch(`/user/add-ajax/${formulaId}/`, {
+      method: 'POST',
+      headers: {
+        'X-CSRFToken': '{{ csrf_token }}',
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        button.textContent = 'Добавлено ✅';
+        button.disabled = true;
+      } else {
+        alert('Ошибка при добавлении');
+      }
+    });
+  });
+});
+</script>
+
 {% endblock %}
 
 {% block javascript %}<script onload="start()" src="{% static 'main/javascript/js_1.js' %}"></script>{% endblock %}
